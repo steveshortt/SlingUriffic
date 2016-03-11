@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>SlingUriffic by steveshortt</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>SlingUriffic</h1>
+        <h2>When installed as the default browser on a Windows machine, SlingUriffic will redirect incoming URLs to the browser of choice based on Regex pattern matches.</h2>
+        <a href="https://github.com/steveshortt/SlingUriffic" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="project-description" class="anchor" href="#project-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Description</h2>
+
+<p>When installed as the default browser on a Windows machine, SlingUriffic will redirect incoming URLs to the browser of choice based on Regex pattern matches.</p>
+
+<h2>
+<a id="what-does-slinguriffic-do-and-how-does-it-work" class="anchor" href="#what-does-slinguriffic-do-and-how-does-it-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What does SlingUriffic do, and how does it work?</h2>
+
+<p>SlingUriffic is designed to run as the default web browser on a Windows machine, and will handle all OS referrers to launch the browser. SlingUriffic is not a browser itself - rather, it redirects requests to the browser of choice based on a Regex dictionary match, as configured in the Settings file. The purpose for SlingUriffic is to provide web browser selection based on URL.</p>
+
+<h3>
+<a id="use-cases" class="anchor" href="#use-cases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use cases</h3>
+
+<ul>
+<li>Ensure sites that require IE for compatibility are directed to IE, and everything else to your preferred browser. This is handy in a corporate environment where IE is required for intranet compatibility.</li>
+<li>Always open certain URLs in "private" mode.</li>
+</ul>
+
+<h3>
+<a id="installuninstall" class="anchor" href="#installuninstall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install/Uninstall</h3>
+
+<ul>
+<li>The setup for SlingUriffic generates a .reg file that contains the settings to register it as the default web browser. You'll need to double-click the reg file to actually install SlingUriffic.</li>
+<li>To uninstall SlingUriffic, simply run whatever browser you wish to have the default browser, and make sure to have that browser detect if it is the default. The browser should prompt you to indicate that it is not the default browser and offer the opportunity to re-register itself. After that, you may delete SlingUriffic from your drive and there will be nothing left behind.</li>
+<li>See <a href="https://github.com/steveshortt/SlingUriffic/wiki/About-SlingUriffic">documentation</a> for detailed instructions.</li>
+</ul>
+
+<h3>
+<a id="example-settings-file" class="anchor" href="#example-settings-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Settings File:</h3>
+
+<pre><code>&lt;?xml version="1.0" encoding="us-ascii"?&gt;
+&lt;Settings&gt;
+  &lt;Browsers&gt;
+    &lt;Browser Name="FF" Path="C:\Program Files (x86)\Mozilla Firefox\firefox.exe" IsDefault="true" /&gt;
+    &lt;Browser Name="IE" Path="C:\Program Files (x86)\Internet Explorer\iexplore.exe" Arguments="-nohome" /&gt;
+  &lt;/Browsers&gt;
+  &lt;Patterns&gt;
+    &lt;Pattern BrowserName="IE" Match="codeplex.com" /&gt;
+    &lt;Pattern BrowserName="IE" Match="microsoft.com" /&gt;
+  &lt;/Patterns&gt;
+&lt;/Settings&gt;
+</code></pre>
+
+<p>In this case, codeplex.com and microsoft.com traffic is directed to Internet Explorer, and all other traffic will route to FireFox.</p>
+
+<h3>
+<a id="why-write-slinguriffic" class="anchor" href="#why-write-slinguriffic" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why write SlingUriffic?</h3>
+
+<p>I wrote this because I prefer other browsers to IE, but need IE for corporate compatibility. I found some utils on the web that do the same thing, but they installed with an .msi, and that makes me nervous. The code is simple and was fast to write, and I've been using it for a couple years on a few machines with no issues. If you run SlingUriffic, please review it. I'd like to know if you find it useful.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/steveshortt/SlingUriffic/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/steveshortt/SlingUriffic/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/steveshortt/SlingUriffic"></a> is maintained by <a href="https://github.com/steveshortt">steveshortt</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
