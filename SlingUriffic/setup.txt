@@ -1,0 +1,35 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\SlingUrifficURL]
+@="SlingUriffic Document"
+"FriendlyTypeName"="SlingUriffic Document"
+
+[HKEY_CURRENT_USER\Software\Classes\SlingUrifficURL\DefaultIcon]
+@="C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe,1"
+
+[HKEY_CURRENT_USER\Software\Classes\SlingUrifficURL\shell]
+@="open"
+
+[HKEY_CURRENT_USER\Software\Classes\SlingUrifficURL\shell\open]
+
+[HKEY_CURRENT_USER\Software\Classes\SlingUrifficURL\shell\open\command]
+@="\"[install_path]\\SlingUriffic.exe\" \"%1\""
+
+
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\ftp]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\ftp\UserChoice]
+"Progid"="SlingUrifficURL"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice]
+"Progid"="SlingUrifficURL"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\https\UserChoice]
+"Progid"="SlingUrifficURL"
